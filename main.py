@@ -138,17 +138,16 @@ if st.session_state.answer_submitted:
             </div>
             """, unsafe_allow_html=True)
 
-            # HTML com estilo inline para centrar texto com um link
-            centred_link_text = """
-            <div style='text-align: center'>
-                <h4>Acompanhe o trabalho do PlanAPP em <a href='https://linktr.ee/planapp' target='_blank'>diferentes plataformas</a>.</h4>
-            </div>
-            """
             st.subheader('')
             st.subheader('', divider='rainbow')
             st.subheader('')
-            st.markdown(centred_link_text, unsafe_allow_html=True)
-            st.divider()
+            st.link_button(
+                label="🫶 Acompanhe o PlanAPP nas redes que prefere",
+                url="https://linktr.ee/planapp",
+                type="primary",
+                help="Acompanhar o PlanAPP nas redes que prefere",
+                use_container_width=True
+            )
             st.subheader('')
 
             # Opção para reiniciar o quiz depois de mostrar o resultado
