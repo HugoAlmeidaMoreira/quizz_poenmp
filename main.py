@@ -1,6 +1,7 @@
 import streamlit as st
 import json
 from streamlit_extras.stoggle import stoggle
+from streamlit_lottie import st_lottie
 import os
 
 def run():
@@ -30,6 +31,13 @@ for key, value in valores_default.items():
 # Carrega os dados do quiz
 with open('content/quiz_data.json', 'r', encoding='utf-8') as f:
     dados_quiz = json.load(f)
+
+def load_lottiefile(filepath: str):
+    with open(filepath, "r") as f:
+        return json.load(f)
+
+# Carrega o ficheiro JSON
+lottie_animation = load_lottiefile("content/assets/badge_planapp.json")
 
 def reiniciar_quiz():
     st.session_state.current_index = 0
@@ -62,10 +70,8 @@ def mostrar_resultado():
     st.session_state.quiz_finalizado = True
 
 # Título e descrição
-
-st.markdown('<h1 style="color: #0e2a49; text-align: center;">Plano Orçamental-Estrutural Nacional de Médio Prazo (POENMP)</h1>', unsafe_allow_html=True)
-st.markdown('<h2 style="color: #0e2a49; text-align: center;">Quizz</h2>', unsafe_allow_html=True)
-
+st.subheader("Plano Orçamental-Estrutural Nacional de Médio Prazo (POENMP)")
+st.image("content/assets/hero.png", use_column_width=True)
 
 
 if not st.session_state.quiz_finalizado:
@@ -83,7 +89,6 @@ if not st.session_state.quiz_finalizado:
     # Seleção de resposta
     opcoes = item_pergunta['options']
     resposta_correta = item_pergunta['answer']
-
 
 if st.session_state.answer_submitted and not st.session_state.mostrar_resultado:
     # Assume que dados_quiz e item_pergunta estão definidos anteriormente no código
@@ -114,7 +119,6 @@ if st.session_state.answer_submitted and not st.session_state.mostrar_resultado:
 
     st.divider()
 
-
 # Botão de submissão e lógica de resposta
 if st.session_state.answer_submitted:
     if st.session_state.current_index < len(dados_quiz) - 1:
@@ -131,16 +135,15 @@ if st.session_state.answer_submitted:
             st.subheader('', divider='rainbow')
             st.subheader('')                
             # Cria um bloco de Markdown para exibir a pontuação com estilo
+            # Renderiza a animação Lottie no Streamlit
             st.markdown(f"""
             <div style="text-align: center;">
-                <h1>🥳 Quiz Concluído! 🥳</h1>
+                <h1>🥳 Quizz Concluído! 🥳</h1>
                 <h4>Obteve {st.session_state.score} pontos em {len(dados_quiz) * 10} pontos possíveis</h4>
             </div>
             """, unsafe_allow_html=True)
 
-            st.subheader('')
-            st.subheader('', divider='rainbow')
-            st.subheader('')
+            st_lottie(lottie_animation, height=300, key="lottie")
             st.link_button(
                 label="🫶 Acompanhe o PlanAPP nas redes que prefere",
                 url="https://linktr.ee/planapp",
@@ -148,12 +151,12 @@ if st.session_state.answer_submitted:
                 help="Acompanhar o PlanAPP nas redes que prefere",
                 use_container_width=True
             )
-            st.subheader('')
-
             # Opção para reiniciar o quiz depois de mostrar o resultado
+            st.subheader('', divider='rainbow')
             st.button('Reiniciar', on_click=reiniciar_quiz)
 
 
+            
 
 else:
     stoggle(
