@@ -63,7 +63,7 @@ def mostrar_resultado():
 
 # Título e descrição
 
-st.markdown('<h1 style="color: #0e2a49; text-align: center;">Programa Nacional de Reformas</h1>', unsafe_allow_html=True)
+st.markdown('<h1 style="color: #0e2a49; text-align: center;">Plano Orçamental-Estrutural Nacional de Médio Prazo (POENMP)</h1>', unsafe_allow_html=True)
 st.markdown('<h2 style="color: #0e2a49; text-align: center;">Quizz</h2>', unsafe_allow_html=True)
 
 
@@ -118,7 +118,7 @@ if st.session_state.answer_submitted and not st.session_state.mostrar_resultado:
 # Botão de submissão e lógica de resposta
 if st.session_state.answer_submitted:
     if st.session_state.current_index < len(dados_quiz) - 1:
-        st.button('Próxima', on_click=proxima_pergunta)
+        st.button('Próxima', on_click=proxima_pergunta, type='primary')
     else:
         # Se o quiz terminou, verifica se o resultado já foi mostrado
         if not st.session_state.get('quiz_finalizado', False):
@@ -169,4 +169,4 @@ else:
 
     st.divider()
     
-    st.button('Submeter', on_click=submeter_resposta)
+    st.button('Responder', on_click=submeter_resposta, type='primary')
