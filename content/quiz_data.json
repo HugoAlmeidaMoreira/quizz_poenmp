@@ -1,58 +1,62 @@
 [
-    { 
-        "question": "Como pode ser definido o Programa Nacional de Reformas (PNR) submetido anualmente pelos Estados-Membros à Comissão Europeia?", 
-        "explanation": "O Programa Nacional de Reformas é um documento estratégico onde cada Estado-Membro detalha as políticas económicas e as reformas estruturais que pretende implementar. O objetivo destas reformas é fortalecer o crescimento económico e a sustentabilidade fiscal, assim como reforçar a competitividade e o pilar social europeu, alinhando-se com as Recomendações Específicas por País (REP).", 
-        "hint": "Este documento é uma peça-chave no ciclo do Semestre Europeu, servindo de base para o diálogo entre cada Estado-Membro e a Comissão Europeia, na formulação, monitorização e execução das políticas públicas", 
-        "options": ["Uma estratégia de investimento", "Um relatório de sustentabilidade", "Um plano de reformas económicas e sociais", "Uma análise de risco financeiro"], 
-        "answer": "Um plano de reformas económicas e sociais" 
-    }, 
-    {	
-        "question": "Quem elabora as principais análises das políticas orçamentais e estruturais no contexto do Semestre Europeu?",
-        "explanation": "A Comissão Europeia é responsável por elaborar as análises das políticas orçamentais e estruturais na fase preparatória do Semestre Europeu, devido à sua expertise técnica, objetivo de promover a estabilidade económica e o crescimento sustentável, à função de assegurar a conformidade com as regras da UE, aptidão em identificar desafios comuns e promover a partilha de melhores práticas, ao seu papel no fomento do diálogo construtivo entre os Estados-Membros e à sua missão de garantir a responsabilidade e a transparência nas políticas económicas dos Estados-membros.",
-        "hint": "Este órgão tem o privilégio único de iniciar legislação europeia e assegurar que as metas económicas e orçamentais dos Estados-Membros estejam em sintonia com os objetivos mais amplos da união. ",
-        "image_path": "content/Assets/pergunta1.png",
-        "caption": "Fonte: https://www.consilium.europa.eu/pt/infographics/european-semester/",
-        "options": ["Comissão Europeia", "Conselho Europeu", "Parlamento Europeu", "Cada Estado-Membro"],
-        "answer": "Comissão Europeia"
+    {
+    "question": "O que é o Plano Orçamental-Estrutural Nacional de Médio Prazo (POENMP)?",
+    "options": [
+    "Documento de planeamento nacional, enviado à Comissão Europeia, que apresenta os compromissos orçamentais do país e as medidas de política pública de reforma e de investimento.",
+    "Programa de planeamento nacional e europeu que contém as previsões de despesa e receita dos Estados-membros da União Europeia.",
+    "Documento estratégico elaborado pela Comissão Europeia que avalia as medidas económicas e investimentos do país para o período de uma legislatura.",
+    "Relatório de análise da sustentabilidade financeira do país."
+    ],
+    "hint": "Este documento faz parte do Semestre Europeu e está relacionado com a coordenação das políticas económicas dos Estados-Membros no âmbito da União Europeia.",
+    "explanation": "Inserido no ciclo do Semestre Europeu, fruto do novo quadro de governação económica da União Europeia, o POENMP é um documento de planeamento que reflete os compromissos orçamentais do país através da trajetória plurianual de despesa líquida, contemplando ainda as medidas de política pública de reforma e de investimento para o período de uma legislatura (quatro anos).",
+    "answer": "Documento de planeamento nacional, enviado à Comissão Europeia, que apresenta os compromissos orçamentais do país e as medidas de política pública de reforma e de investimento."
     },
     {
-        "question": "Quem emite as orientações políticas globais para os Programas Nacionais de Reformas?",
-        "explanation": "Entre janeiro e abril, durante a primeira fase do Semestre Europeu, o Parlamento Europeu analisa e dá parecer sobre as orientações propostas, culminando com o Conselho Europeu que, aproveitando a sua posição estratégica como a entidade que congrega os líderes dos Estados-Membros, emite as orientações políticas que vão direcionar a ação dos Governos e a formulação dos Programas Nacionais de Reformas, garantindo assim que as políticas nacionais estejam alinhadas com as prioridades acordadas a nível da UE.",
-        "hint": "Este órgão reúne os líderes dos Estados-Membros da União Europeia, incluindo Presidentes e Primeiros-Ministros, sob a liderança de uma figura permanente que representa a união a nível internacional sem deter poderes de decisão nacional. ",
-        "image_path": "content/Assets/pergunta2.png",
-        "caption": "Fonte: https://www.consilium.europa.eu/pt/infographics/european-semester/",
-        "options": ["Comissão Europeia", "Conselho Europeu", "Parlamento Europeu", "Cada Estado-Membro"],
-        "answer": "Conselho Europeu"
+    "question": "O POENMP substitui o Programa Nacional de Reformas (PNR) e o Programa de Estabilidade (PE) como documento de planeamento?",
+    "options": [
+    "Sim, o POENMP substitui o Programa Nacional de Reformas e o Programa de Estabilidade.",
+    "Sim, o POENMP substitui não só o Programa Nacional de Reformas e o Programa de Estabilidade, mas também as Grandes Opções.",
+    "Não, os três documentos coexistem.",
+    "Não, o POENMP é integrado no PE e no PNR, sem os substituir."
+    ],
+    "hint": "Informar, num único documento, sobre reformas e investimentos e como estão suportados pelos recursos orçamentais traz melhorias na formulação das políticas.",
+    "explanation": "No âmbito do Ciclo do Semestre Europeu e do novo quadro de governação económica da União Europeia (UE), o POENMP passa a substituir o Programa de Estabilidade e o Programa Nacional de Reformas fundindo-os num único documento.",
+    "answer": "Sim, o POENMP substitui o Programa Nacional de Reformas e o Programa de Estabilidade."
     },
     {
-        "question": "Quem aprova a versão final das Recomendações Específicas por País?",
-        "explanation": "A segunda fase do Semestre Europeu, que se desenrola de abril a julho, envolve a atualização de objetivos, políticas e planos específicos por cada Estado-Membro. Em maio, a Comissão Europeia elabora recomendações específicas para cada país, baseadas na análise dos Programas Nacionais de Reformas submetidos. Em junho, o Conselho da UE, que é composto pelos ministros dos Estados-Membros, responsáveis pelas áreas de política abrangidas pelas recomendações, aprova a versão final dessas recomendações. Posteriormente, em julho, o Conselho Europeu, que reúne os Chefes de Estado ou de Governo, homologa essas recomendações. Finalmente, o Conselho da UE adota formalmente as recomendações, dando a cada país orientações claras sobre as reformas económicas e orçamentais a serem implementadas.",
-        "hint": "Este órgão da União Europeia, com diferentes configurações setoriais, composto por ministros de cada Estado-Membros, é a principal instância de decisão que, após o trabalho preparatório da Comissão, e em co-decisão com o Parlamento Europeu, se reúne para aprovar formalmente uma variedade de políticas e leis da UE.",
-        "image_path": "content/Assets/pergunta3.png",
-        "caption": "Fonte: https://www.consilium.europa.eu/pt/infographics/european-semester/",
-        "options": ["Comissão Europeia", "Conselho Europeu", "Conselho da União Europeia", "Cada Estado-Membro"],
-        "answer": "Conselho da União Europeia"
+    "question": "Qual o principal objetivo do POENMP?",
+    "options": [
+    "Garantir a coordenação das políticas orçamentais, e a articulação das políticas públicas dos Estados-membros com as recomendações específicas por país (REP) e com as prioridades comuns da União.",
+    "Assegurar a articulação das políticas públicas com o Programa Nacional de Reformas e o Programa de Estabilidade.",
+    "Garantir o cumprimento das metas orçamentais do Governo e a redução da dívida pública para um valor inferior a 60% do PIB.",
+    "Promover a inovação tecnológica e a transição digital no desenvolvimento das políticas públicas nacionais."
+    ],
+    "hint": "Este documento pretende adaptar-se à heterogeneidade das situações orçamentais e aos desafios económicos dos diferentes Estados-Membros, promovendo uma coordenação eficaz e sustentável das políticas públicas.",
+    "explanation": "O POENMP incorpora medidas de política pública orçamental e de política estrutural que traduzem as prioridades e a visão do país em articulação com as Recomendações Específicas por País (REP) dirigidas a Portugal e as prioridades comuns da UE identificadas no contexto do Semestre Europeu.",
+    "answer": "Garantir a coordenação das políticas orçamentais, e a articulação das políticas públicas dos Estados-membros com as recomendações específicas por país (REP) e com as prioridades comuns da União."
     },
     {
-        "question": "Quem está encarregado de implementar as recomendações específicas para cada país?",
-        "explanation": "Na terceira fase do Semestre Europeu, após a adoção das recomendações pelo Conselho da UE em julho, são os próprios Estados-Membros que ficam encarregados de implementar as recomendações específicas. Cada país deve considerar estas recomendações no processo de decisão nacional sobre o respetivo orçamento para o ano seguinte, assim como integrando-as nas suas políticas e medidas  sectoriais, com o objetivo de alcançar um crescimento sustentável e cumprir com os compromissos europeus.",
-        "hint": "A União Europeia consubstancia uma forma de governação multinível em que a formulação, execução e avaliação das políticas públicas se encontra repartida entre vários níveis de decisão. Nesta fase a Comissão Europeia não fica encarregue de implementar diretamente as recomendações.",
-        "image_path": "content/Assets/pergunta4.png",
-        "caption": "Fonte: https://www.consilium.europa.eu/pt/infographics/european-semester/",
-        "options": ["Comissão Europeia", "Cada Estado-Membro", "Conselho Europeu", "Parlamento Europeu"],
-        "answer": "Cada Estado-Membro"
+    "question": "Quem é responsável pela elaboração do POENMP?",
+    "options": [
+    "O Governo de Portugal",
+    "A Comissão Europeia",
+    "A Assembleia da República",
+    "O Tribunal de Contas"
+    ],
+    "hint": "O responsável é o órgão de soberania que concentra em si o exercício do poder executivo e a condução geral da política do Estado.",
+    "explanation": "O POENMP é da responsabilidade do Governo, tendo os Ministérios das Finanças e da Presidência preponderância na sua elaboração e coordenação, sendo anteriormente os responsáveis, respetivamente, pelo Programa de Estabilidade e pelo Programa Nacional de Reformas, que agora se fundem num único documento.",
+    "answer": "O Governo de Portugal"
     },
     {
-        "question": "Que documento estratégico substituirá o Programa Nacional de Reformas (PNR) e o Programa de Estabilidade (PE) na próxima fase de planeamento fiscal e reformas estruturais?",
-        "explanation": "A União Europeia está a caminho de uma reformulação nas suas diretrizes económicas e sociais com a fusão do Programa Nacional de Reforma e o Programa de Estabilidade. Este novo documento visa criar um quadro integrado que reflete políticas orçamentais e setoriais mais coesas e alinhadas com os objetivos de crescimento sustentável e estabilidade económica da UE.",
-        "hint": "O novo plano é o resultado da fusão de dois documentos pré-existentes e pretende incluir informação  da ação relativa apolíticas orçamentais e a reformas estruturais dos Estados-Membros.",
-        "options": [
-            "Plano Orçamental-Estrutural",
-            "Programa de Consolidação Fiscal",
-            "Estratégia de Crescimento a Longo Prazo",
-            "Diretrizes Económicas Integradas"
-        ],
-        "answer": "Plano Orçamental-Estrutural"
+    "question": "Por que razão o PlanAPP está envolvido diretamente na elaboração do POENMP?",
+    "options": [
+    "O PlanAPP é a instituição responsável pelo alinhamento e coerência das políticas públicas no centro do Governo, tendo competências de planeamento, monotorização e avaliação.",
+    "O PlanAPP realiza estudos de prospetiva na área de economia.",
+    "O PlanAPP é a única instituição responsável no país pela interface entre ciência e decisão política.",
+    "O PlanAPP está no Ministério da Presidência."
+    ],
+    "hint": "Com o início de um novo Governo, o PlanAPP coordena a elaboração das Grandes Opções, uma exposição das prioridades de ação para a legislatura.",
+    "explanation": "A complexidade dos problemas políticos e os diferentes níveis de governação exigem uma instituição no centro do Governo que acompanhe de uma forma multidimensional a formulação, a execução e os resultados das políticas públicas. Além disso, o PlanAPP era já o organismo responsável por coordenar e acompanhar a elaboração e execução do Programa Nacional de Reformas (PNR), instrumento de planeamento substituído, em 2024, pelo POENMP.",
+    "answer": "O PlanAPP é a instituição responsável pelo alinhamento e coerência das políticas públicas no centro do Governo, tendo competências de planeamento, monotorização e avaliação."
     }
-]
-
+    ]

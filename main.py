@@ -19,6 +19,7 @@ st.markdown("""
 div.stButton > button:first-child {
     display: block;
     margin: 0 auto;
+    border-width: 3px;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -69,12 +70,12 @@ def mostrar_resultado():
     st.session_state.mostrar_resultado = True
     st.session_state.quiz_finalizado = True
 
-# Título e descrição
-st.subheader("Plano Orçamental-Estrutural Nacional de Médio Prazo (POENMP)")
-st.image("content/assets/hero.png", use_column_width=True)
 
 
 if not st.session_state.quiz_finalizado:
+    # Título e descrição
+    st.subheader("Plano Orçamental-Estrutural Nacional de Médio Prazo (POENMP)")
+    st.image("content/assets/hero.png", use_column_width=True)
     # Barra de progresso
     valor_barra_progresso = (st.session_state.current_index + 1) / len(dados_quiz)
     numero_pergunta_atual = st.session_state.current_index + 1
@@ -131,8 +132,6 @@ if st.session_state.answer_submitted:
                 # Esconde o botão "Mostrar Resultado" e mostra "Reiniciar"
                 st.session_state.mostrar_resultado = False
         elif st.session_state.mostrar_resultado:
-
-            st.subheader('', divider='rainbow')
             st.subheader('')                
             # Cria um bloco de Markdown para exibir a pontuação com estilo
             # Renderiza a animação Lottie no Streamlit
@@ -148,7 +147,6 @@ if st.session_state.answer_submitted:
                 label="🫶 Acompanhe o PlanAPP nas redes que prefere",
                 url="https://linktr.ee/planapp",
                 type="primary",
-                help="Acompanhar o PlanAPP nas redes que prefere",
                 use_container_width=True
             )
             # Opção para reiniciar o quiz depois de mostrar o resultado
