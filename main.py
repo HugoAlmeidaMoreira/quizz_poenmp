@@ -74,7 +74,6 @@ def mostrar_resultado():
 
 if not st.session_state.quiz_finalizado:
     # Título e descrição
-    st.subheader("Plano Orçamental-Estrutural Nacional de Médio Prazo (POENMP)")
     st.image("content/assets/hero.png", use_column_width=True)
     # Barra de progresso
     valor_barra_progresso = (st.session_state.current_index + 1) / len(dados_quiz)
