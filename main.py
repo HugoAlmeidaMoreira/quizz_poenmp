@@ -99,10 +99,10 @@ if st.session_state.answer_submitted and not st.session_state.mostrar_resultado:
 
     # Define a mensagem e a cor do fundo com base na corretude da resposta
     if st.session_state.selected_option == item_pergunta['answer']:
-        mensagem = "Correto!"
+        mensagem = "Correto!🤓"
         cor_borda = "#3CB371"  # Uma cor de fundo suave para resposta correta, por exemplo, verde claro
     else:
-        mensagem = f"Errado. A resposta certa é {item_pergunta['answer']}"
+        mensagem = "Errado!😔"
         cor_borda = "#FFCDD2"  # Uma cor de fundo suave para resposta incorreta, por exemplo, vermelho claro
 
     # Renderiza o feedback
