@@ -3,6 +3,7 @@ import json
 from streamlit_extras.stoggle import stoggle
 from streamlit_lottie import st_lottie
 import os
+import random  # Importa o módulo random para baralhar as opções
 
 def run():
     st.set_page_config(
@@ -25,7 +26,7 @@ div.stButton > button:first-child {
 """, unsafe_allow_html=True)
 
 # Inicializa as variáveis da sessão se elas não existirem
-valores_default = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': None, 'answer_submitted': False, 'quiz_finalizado': False, 'mostrar_resultado': False}
+valores_default = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': None, 'answer_submitted': False, 'quiz_finalizado': False, 'mostrar_resultado': False, 'shuffled_options': []}
 for key, value in valores_default.items():
     st.session_state.setdefault(key, value)
 
@@ -47,6 +48,7 @@ def reiniciar_quiz():
     st.session_state.answer_submitted = False
     st.session_state.quiz_finalizado = False
     st.session_state.mostrar_resultado = False
+    st.session_state.shuffled_options = []
 
 def submeter_resposta():
     # Verifica se uma opção foi selecionada
@@ -64,13 +66,12 @@ def proxima_pergunta():
     st.session_state.current_index += 1
     st.session_state.selected_option = None
     st.session_state.answer_submitted = False
+    st.session_state.shuffled_options = []
 
 # Função que atualiza o estado para mostrar o resultado
 def mostrar_resultado():
     st.session_state.mostrar_resultado = True
     st.session_state.quiz_finalizado = True
-
-
 
 if not st.session_state.quiz_finalizado:
     # Título e descrição
@@ -81,14 +82,16 @@ if not st.session_state.quiz_finalizado:
     st.write(f"Pergunta {numero_pergunta_atual} de {len(dados_quiz)}")
     st.progress(valor_barra_progresso)
 
-
     # Exibe a pergunta e as opções de resposta
     item_pergunta = dados_quiz[st.session_state.current_index]
     st.subheader(f"{item_pergunta['question']}")
 
     # Seleção de resposta
-    opcoes = item_pergunta['options']
-    resposta_correta = item_pergunta['answer']
+    if not st.session_state.shuffled_options:
+        # Baralha as opções para apresentá-las de forma aleatória apenas na primeira vez
+        st.session_state.shuffled_options = random.sample(item_pergunta['options'], len(item_pergunta['options']))
+
+    opcoes = st.session_state.shuffled_options
 
 if st.session_state.answer_submitted and not st.session_state.mostrar_resultado:
     # Assume que dados_quiz e item_pergunta estão definidos anteriormente no código
@@ -143,7 +146,7 @@ if st.session_state.answer_submitted:
 
             st_lottie(lottie_animation, height=300, key="lottie")
             st.link_button(
-                label="🫶 Acompanhe o PlanAPP nas redes que prefere",
+                label="🧦 Acompanhe o PlanAPP nas redes que prefere",
                 url="https://linktr.ee/planapp",
                 type="primary",
                 use_container_width=True
@@ -151,9 +154,6 @@ if st.session_state.answer_submitted:
             # Opção para reiniciar o quiz depois de mostrar o resultado
             st.subheader('', divider='rainbow')
             st.button('Reiniciar', on_click=reiniciar_quiz)
-
-
-            
 
 else:
     stoggle(
@@ -163,8 +163,7 @@ else:
     st.markdown(""" ___""")
     # Renderiza os botões para seleção de opção
     for i, opcao in enumerate(opcoes):
-        
-        if st.button(opcao, key=i, use_container_width=True):
+        if st.button(opcao, key=f"option_{st.session_state.current_index}_{i}", use_container_width=True):
             st.session_state.selected_option = opcao  
 
     st.divider()
