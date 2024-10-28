@@ -7,7 +7,7 @@ import random  # Importa o módulo random para baralhar as opções
 
 def run():
     st.set_page_config(
-        page_title="Quizz Programa Nacional de Reformas",
+        page_title="Quizz Plano Orçamental-Estrutural Nacional de Médio Prazo (POENMP)",
         page_icon="🇪🇺",
     )
 
