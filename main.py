@@ -3,7 +3,7 @@ import json
 from streamlit_extras.stoggle import stoggle
 from streamlit_lottie import st_lottie
 import os
-import random  # Importa o módulo random para baralhar as opções
+import random 
 
 def run():
     st.set_page_config(
@@ -75,7 +75,7 @@ def mostrar_resultado():
 
 if not st.session_state.quiz_finalizado:
     # Título e descrição
-    st.image("content/assets/hero.png", use_column_width=True)
+    st.image("content/assets/hero.png", use_container_width=True)
     # Barra de progresso
     valor_barra_progresso = (st.session_state.current_index + 1) / len(dados_quiz)
     numero_pergunta_atual = st.session_state.current_index + 1
@@ -118,7 +118,7 @@ if st.session_state.answer_submitted and not st.session_state.mostrar_resultado:
     # Verifica se o caminho da imagem existe e, se sim, mostra a imagem
     if caminho_imagem and os.path.isfile(caminho_imagem):
         st.markdown("___")
-        st.image(caminho_imagem, caption=caminho_caption, use_column_width=True)
+        st.image(caminho_imagem, caption=caminho_caption, use_container_width=True)
 
     st.divider()
 
